@@ -637,6 +637,102 @@ footer a { color: var(--gold); text-decoration: none; }
   50% { opacity: 0.5; transform: scale(0.75); }
 }
 
+/* ── ORDER PAGE ── */
+.order-page { background: var(--bg); min-height: 100vh; padding-top: 9rem; }
+.order-page .section-inner { max-width: 780px; }
+
+.order-form { gap: 2.5rem; }
+
+.order-fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.order-fieldset legend {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.field { display: flex; flex-direction: column; gap: 0.45rem; }
+
+.field label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.order-form input[type="date"] { color-scheme: dark; }
+
+.order-item {
+  display: grid;
+  grid-template-columns: 1fr auto 84px;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(200, 151, 58, 0.12);
+}
+
+.order-item-name { display: block; color: var(--cream); font-size: 0.95rem; }
+.order-item-detail { display: block; color: var(--cream-dim); font-size: 0.8rem; margin-top: 0.15rem; }
+.order-item-price { color: var(--gold-light); font-size: 0.9rem; font-weight: 700; }
+.order-form .order-item input { text-align: center; padding: 0.55rem; }
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(200, 151, 58, 0.4);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--cream);
+}
+.order-total strong { color: var(--gold-light); font-weight: 600; }
+
+.order-error { color: #e8a0a0; font-size: 0.9rem; }
+.order-note { color: var(--cream-dim); font-size: 0.85rem; line-height: 1.6; font-style: italic; }
+
+.order-form .btn { align-self: flex-start; }
+
+[hidden] { display: none !important; }
+
+.order-closed {
+  border: 1px solid rgba(200, 151, 58, 0.25);
+  background: rgba(200, 151, 58, 0.06);
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.order-closed p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--cream-dim);
+  max-width: 560px;
+}
+
+.order-cta-note {
+  margin-top: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--cream-dim);
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav ul { display: none; }

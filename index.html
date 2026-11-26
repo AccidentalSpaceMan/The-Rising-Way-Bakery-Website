@@ -154,7 +154,8 @@
       </div>
 
       <div class="order-cta">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH0ckoOvBmsucD7vEvAXsjX4Ii2Z2nryQmnz6Ha5TkoTWwJg/closedform" class="btn btn-primary">Order Online</a>
+        <a href="order.html" class="btn btn-primary">Order Online</a>
+        <p class="order-cta-note" id="order-cta-note" hidden>Orders are closed for this week's bake. Check back soon for the next menu!</p>
       </div>
     </div>
   </section>
@@ -227,6 +228,11 @@
   <footer>
     <p>&copy; 2026 The Rising Way &middot; Made with 🧡 &middot; <a href="mailto:therisingwaybakery@gmail.com">therisingwaybakery@gmail.com</a></p>
   </footer>
+
+  <script src="order-status.js"></script>
+  <script>
+    if (window.ORDERS_OPEN !== true) document.getElementById('order-cta-note').hidden = false;
+  </script>
 
 </body>
 </html>
