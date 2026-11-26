@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Author" content="Bryan Thomas">
+  <title>Order | The Rising Way Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="icons8-bread-and-rye-64.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">The Rising Way <span>Bakery</span></a>
+    <ul>
+      <li><a href="index.html#menu">Menu</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ORDER -->
+  <section class="order-page">
+    <div class="section-inner">
+      <p class="section-label">Order Request</p>
+      <h1 class="section-title"><em>Place an Order</em></h1>
+      <div class="order-closed" id="order-closed">
+        <p id="order-closed-message">Thank you for visiting! The Rising Way Bakery is no longer accepting orders for this week's bake. I've officially started prepping the dough and starters, but I'll be back with a fresh menu soon! Thank you for supporting my small-batch journey.</p>
+        <a href="index.html#menu" class="btn btn-outline">View the Menu</a>
+      </div>
+
+      <p class="section-sub" id="order-intro" hidden>Choose what you'd like and send it our way. We'll be in touch to confirm the details, finalize your date, and send over an invoice before your order is completed.</p>
+
+      <form class="contact-form order-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" hidden>
+
+        <fieldset class="order-fieldset">
+          <legend>Your Details</legend>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="field">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="Preferred date" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="order-fieldset">
+          <legend>Muffins</legend>
+          <div class="order-item">
+            <div><span class="order-item-name">Blueberry Breakfast Bread</span><span class="order-item-detail">Jumbo, single</span></div>
+            <span class="order-item-price">$3</span>
+            <input type="number" min="0" max="99" value="0" data-price="3" name="Blueberry Breakfast Bread - Jumbo Single" aria-label="Quantity: Blueberry Breakfast Bread, jumbo single">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Blueberry Breakfast Bread</span><span class="order-item-detail">Jumbo, 2 pack</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Blueberry Breakfast Bread - Jumbo 2 Pack" aria-label="Quantity: Blueberry Breakfast Bread, jumbo 2 pack">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Blueberry Breakfast Bread</span><span class="order-item-detail">Jumbo, 4 pack</span></div>
+            <span class="order-item-price">$7</span>
+            <input type="number" min="0" max="99" value="0" data-price="7" name="Blueberry Breakfast Bread - Jumbo 4 Pack" aria-label="Quantity: Blueberry Breakfast Bread, jumbo 4 pack">
+          </div>
+        </fieldset>
+
+        <fieldset class="order-fieldset">
+          <legend>Bread</legend>
+          <div class="order-item">
+            <div><span class="order-item-name">Classic Sourdough</span><span class="order-item-detail">Regular loaf</span></div>
+            <span class="order-item-price">$10</span>
+            <input type="number" min="0" max="99" value="0" data-price="10" name="Classic Sourdough - Regular Loaf" aria-label="Quantity: Classic Sourdough, regular loaf">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Classic Sourdough</span><span class="order-item-detail">Mini loaf</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Classic Sourdough - Mini Loaf" aria-label="Quantity: Classic Sourdough, mini loaf">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Soft Crust Sourdough</span><span class="order-item-detail">Regular loaf</span></div>
+            <span class="order-item-price">$10</span>
+            <input type="number" min="0" max="99" value="0" data-price="10" name="Soft Crust Sourdough - Regular Loaf" aria-label="Quantity: Soft Crust Sourdough, regular loaf">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Soft Crust Sourdough</span><span class="order-item-detail">Mini loaf</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Soft Crust Sourdough - Mini Loaf" aria-label="Quantity: Soft Crust Sourdough, mini loaf">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Roasted Garlic &amp; Herb Sourdough Bread</span><span class="order-item-detail">Regular loaf</span></div>
+            <span class="order-item-price">$10</span>
+            <input type="number" min="0" max="99" value="0" data-price="10" name="Roasted Garlic &amp; Herb Sourdough Bread - Regular Loaf" aria-label="Quantity: Roasted Garlic and Herb Sourdough Bread, regular loaf">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Roasted Garlic &amp; Herb Sourdough Bread</span><span class="order-item-detail">Mini loaf</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Roasted Garlic &amp; Herb Sourdough Bread - Mini Loaf" aria-label="Quantity: Roasted Garlic and Herb Sourdough Bread, mini loaf">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Garlic, Herb &amp; Cheddar Sourdough Bread</span><span class="order-item-detail">Regular loaf</span></div>
+            <span class="order-item-price">$10</span>
+            <input type="number" min="0" max="99" value="0" data-price="10" name="Garlic, Herb &amp; Cheddar Sourdough Bread - Regular Loaf" aria-label="Quantity: Garlic, Herb and Cheddar Sourdough Bread, regular loaf">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Garlic, Herb &amp; Cheddar Sourdough Bread</span><span class="order-item-detail">Mini loaf</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Garlic, Herb &amp; Cheddar Sourdough Bread - Mini Loaf" aria-label="Quantity: Garlic, Herb and Cheddar Sourdough Bread, mini loaf">
+          </div>
+        </fieldset>
+
+        <fieldset class="order-fieldset">
+          <legend>Sweet &amp; Treats</legend>
+          <div class="order-item">
+            <div><span class="order-item-name">Classic Cinnamon Roll</span><span class="order-item-detail">Jumbo, single</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Classic Cinnamon Roll - Jumbo Single" aria-label="Quantity: Classic Cinnamon Roll, jumbo single">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Classic Cinnamon Roll</span><span class="order-item-detail">Jumbo, 4 pack</span></div>
+            <span class="order-item-price">$15</span>
+            <input type="number" min="0" max="99" value="0" data-price="15" name="Classic Cinnamon Roll - Jumbo 4 Pack" aria-label="Quantity: Classic Cinnamon Roll, jumbo 4 pack">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Classic Cinnamon Roll</span><span class="order-item-detail">Bite size, snack pack</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Classic Cinnamon Roll - Bite Size Snack Pack" aria-label="Quantity: Classic Cinnamon Roll, bite size snack pack">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Classic Cinnamon Roll</span><span class="order-item-detail">Bite size, party pack</span></div>
+            <span class="order-item-price">$20</span>
+            <input type="number" min="0" max="99" value="0" data-price="20" name="Classic Cinnamon Roll - Bite Size Party Pack" aria-label="Quantity: Classic Cinnamon Roll, bite size party pack">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Chocolate Peanut Butter Roll</span><span class="order-item-detail">Jumbo, single</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Chocolate Peanut Butter Roll - Jumbo Single" aria-label="Quantity: Chocolate Peanut Butter Roll, jumbo single">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Chocolate Peanut Butter Roll</span><span class="order-item-detail">Jumbo, 4 pack</span></div>
+            <span class="order-item-price">$15</span>
+            <input type="number" min="0" max="99" value="0" data-price="15" name="Chocolate Peanut Butter Roll - Jumbo 4 Pack" aria-label="Quantity: Chocolate Peanut Butter Roll, jumbo 4 pack">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Chocolate Peanut Butter Roll</span><span class="order-item-detail">Bite size, snack pack</span></div>
+            <span class="order-item-price">$5</span>
+            <input type="number" min="0" max="99" value="0" data-price="5" name="Chocolate Peanut Butter Roll - Bite Size Snack Pack" aria-label="Quantity: Chocolate Peanut Butter Roll, bite size snack pack">
+          </div>
+          <div class="order-item">
+            <div><span class="order-item-name">Chocolate Peanut Butter Roll</span><span class="order-item-detail">Bite size, party pack</span></div>
+            <span class="order-item-price">$20</span>
+            <input type="number" min="0" max="99" value="0" data-price="20" name="Chocolate Peanut Butter Roll - Bite Size Party Pack" aria-label="Quantity: Chocolate Peanut Butter Roll, bite size party pack">
+          </div>
+        </fieldset>
+
+        <fieldset class="order-fieldset">
+          <legend>Cookies</legend>
+          <div class="order-item">
+            <div><span class="order-item-name">Assorted Cookies</span><span class="order-item-detail">Single</span></div>
+            <span class="order-item-price">$3.50</span>
+            <input type="number" min="0" max="99" value="0" data-price="3.5" name="Assorted Cookies - Single" aria-label="Quantity: Assorted Cookies, single">
+          </div>
+        </fieldset>
+
+        <fieldset class="order-fieldset">
+          <legend>Notes</legend>
+          <div class="field">
+            <label for="notes">Allergies, custom requests, or anything else we should know</label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="order-total">
+          <span>Estimated total</span>
+          <strong id="order-total">$0.00</strong>
+        </div>
+        <input type="hidden" name="Estimated total" value="$0.00">
+        <p class="order-error" id="order-error" role="alert" hidden>Please add at least one item to your order.</p>
+        <p class="order-note">This is an order request, not a charge. We'll confirm everything and send an invoice before your order is completed.</p>
+
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Send Order Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 The Rising Way &middot; Made with 🧡 &middot; <a href="mailto:therisingwaybakery@gmail.com">therisingwaybakery@gmail.com</a></p>
+  </footer>
+
+  <script src="order-status.js"></script>
+  <script>
+    const form = document.querySelector('.order-form');
+
+    if (window.ORDERS_OPEN === true) {
+      form.hidden = false;
+      document.getElementById('order-intro').hidden = false;
+      document.getElementById('order-closed').hidden = true;
+    } else if (window.ORDERS_CLOSED_MESSAGE) {
+      document.getElementById('order-closed-message').textContent = window.ORDERS_CLOSED_MESSAGE;
+    }
+
+    const quantities = [...form.querySelectorAll('input[data-price]')];
+    const totalEl = document.getElementById('order-total');
+    const totalInput = form.querySelector('input[name="Estimated total"]');
+    const errorEl = document.getElementById('order-error');
+
+    document.getElementById('date').min = new Date().toLocaleDateString('en-CA');
+
+    function updateTotal() {
+      const total = quantities.reduce((sum, input) => sum + (Number(input.value) || 0) * Number(input.dataset.price), 0);
+      totalEl.textContent = '$' + total.toFixed(2);
+      totalInput.value = '$' + total.toFixed(2);
+      if (total > 0) errorEl.hidden = true;
+    }
+
+    form.addEventListener('input', updateTotal);
+
+    form.addEventListener('submit', (event) => {
+      if (!quantities.some((input) => Number(input.value) > 0)) {
+        event.preventDefault();
+        errorEl.hidden = false;
+        return;
+      }
+      quantities.forEach((input) => { if (!(Number(input.value) > 0)) input.disabled = true; });
+    });
+
+    window.addEventListener('pageshow', () => {
+      quantities.forEach((input) => { input.disabled = false; });
+      updateTotal();
+    });
+  </script>
+
+</body>
+</html>
