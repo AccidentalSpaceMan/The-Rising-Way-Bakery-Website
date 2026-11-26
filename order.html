@@ -11,13 +11,17 @@
 </head>
 <body>
 
+  <div class="progress" aria-hidden="true"></div>
+
   <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">The Rising Way <span>Bakery</span></a>
-    <ul>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+    <ul id="nav-links">
       <li><a href="index.html#menu">Menu</a></li>
-      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#about">Our Story</a></li>
       <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html" class="btn btn-outline btn-small">Home</a></li>
     </ul>
   </nav>
 
@@ -198,11 +202,15 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 The Rising Way &middot; Made with 🧡 &middot; <a href="mailto:therisingwaybakery@gmail.com">therisingwaybakery@gmail.com</a></p>
+  <footer class="order-footer">
+    <div class="footer-bar">
+      <span>&copy; 2026 The Rising Way Bakery &middot; Made with 🧡</span>
+      <a href="mailto:therisingwaybakery@gmail.com">therisingwaybakery@gmail.com</a>
+    </div>
   </footer>
 
   <script src="order-status.js"></script>
+  <script src="script.js" defer></script>
   <script>
     const form = document.querySelector('.order-form');
 
